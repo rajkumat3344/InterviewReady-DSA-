@@ -14,7 +14,7 @@ class Solution{
     // r : ending index of the array i.e size-1
     // k : find kth smallest element and return using this function
     int kthSmallest(int arr[], int l, int r, int k) {
-        //code here
+        //Time Complexity O(N)
         sort(arr,arr+r+1);
        for(int i=l ; i<=r ; i++)
        {
