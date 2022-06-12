@@ -6,27 +6,14 @@ using namespace std;
 //User function template for C++
 class Solution{
 public:
-    void fixedArray(int arr[], int length){
-        for(int i=1; i<length; i++){
-            if(arr[i] < arr[i-1]){
-                int temp = arr[i];
-                arr[i] = arr[i-1];
-                arr[i-1] = temp;
-            }
-        }
-    }
-
 	void merge(int arr1[], int arr2[], int n, int m) {
 	    // code here
-        int i=0, j=0;
-        while(i<n){
-            if(arr1[i] > arr2[j]){
-                int temp = arr1[i];
-                arr1[i] = arr2[j];
-                arr2[j] = temp;
-                fixedArray(arr2, m);
+        for(int i=0; i<n; i++){
+            if(arr1[i] > arr2[0]){
+                swap(arr1[i], arr2[0]);
             }
-            i++;
+            sort(arr1,arr1 + n);
+            sort(arr2,arr2 + m);
         }
 	}
 };
