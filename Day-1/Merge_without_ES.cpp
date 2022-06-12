@@ -4,6 +4,7 @@ using namespace std;
 
  // } Driver Code Ends
 //User function template for C++
+//Correct one
 class Solution{
 public:
 	void merge(int arr1[], int arr2[], int n, int m) {
