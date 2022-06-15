@@ -17,8 +17,7 @@ class Solution{
             arr[remainder] += n;
         }
         for(int i=0;i<n;i++){
-            int quotient = arr[i]/n;
-            if(quotient >= 2) ans.push_back(i);
+            if(arr[i] >= n*2) ans.push_back(i);
         }
         if(ans.size() == 0){
             ans.push_back(-1);
